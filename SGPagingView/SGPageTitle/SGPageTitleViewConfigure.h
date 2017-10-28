@@ -43,6 +43,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) CGFloat indicatorHeight;
 /** 指示器颜色，默认为红色 */
 @property (nonatomic, strong) UIColor *indicatorColor;
+/** 指示器边框颜色，默认为透明 */
+@property (nonatomic, strong) UIColor *indicatorBorderColor;
 /** 指示器的额外宽度，介于按钮文字宽度与按钮宽度之间 */
 @property (nonatomic, assign) CGFloat indicatorAdditionalWidth;
 /** 指示器动画时间，默认为 0.1f，取值范围 0 ～ 0.3f */
@@ -51,6 +53,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) SGIndicatorStyle indicatorStyle;
 /** 指示器遮盖样式的圆角大小，默认为 0.f */
 @property (nonatomic, assign) CGFloat indicatorCornerRadius;
+/** 指示器遮盖样式的边框大小，默认为 0.f */
+@property (nonatomic, assign) CGFloat indicatorBorderWidth;
 /** 指示器滚动位置改变样式，默认为 SGIndicatorScrollStyleDefault */
 @property (nonatomic, assign) SGIndicatorScrollStyle indicatorScrollStyle;
 /** 按钮之间的间距，默认为 20f */

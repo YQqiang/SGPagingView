@@ -37,11 +37,14 @@
 - (void)setupPageView {
     NSArray *titleArr = @[@"精选", @"电影", @"电视剧", @"综艺", @"NBA", @"娱乐", @"动漫", @"演唱会", @"VIP会员"];
     SGPageTitleViewConfigure *configure = [SGPageTitleViewConfigure pageTitleViewConfigure];
-    configure.titleSelectedColor = [UIColor whiteColor];
+    configure.titleSelectedColor = [UIColor blueColor];
     configure.indicatorStyle = SGIndicatorStyleCover;
-    configure.indicatorColor = [UIColor blackColor];
+    configure.indicatorColor = [UIColor clearColor];
+    configure.indicatorBorderColor = [UIColor blueColor];
+    configure.indicatorBorderWidth = 2.0;
+    configure.indicatorCornerRadius = 20;
     configure.indicatorAdditionalWidth = 100; // 说明：指示器额外增加的宽度，不设置，指示器宽度为标题文字宽度；若设置无限大，则指示器宽度为按钮宽度
-    configure.indicatorHeight = 122; // 说明：不设置，遮盖样式下，默认高度为文字高度 + 5；若设置无限大，则高度为 PageTitleView 高度
+    configure.indicatorHeight = 34; // 说明：不设置，遮盖样式下，默认高度为文字高度 + 5；若设置无限大，则高度为 PageTitleView 高度
     
     /// pageTitleView
     self.pageTitleView = [SGPageTitleView pageTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44) delegate:self titleNames:titleArr configure:configure];

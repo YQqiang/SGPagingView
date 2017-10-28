@@ -178,8 +178,15 @@
             } else {
                 _indicatorView.layer.cornerRadius = self.configure.indicatorCornerRadius;
             }
+            // 边框处理
+            if (self.configure.indicatorBorderWidth > 0.5 * _indicatorView.SG_height) {
+                _indicatorView.layer.borderWidth = 0.5 * _indicatorView.SG_height;
+            } else {
+                _indicatorView.layer.borderWidth = self.configure.indicatorBorderWidth;
+            }
         }
         _indicatorView.backgroundColor = self.configure.indicatorColor;
+        _indicatorView.layer.borderColor = self.configure.indicatorBorderColor.CGColor;
     }
     return _indicatorView;
 }

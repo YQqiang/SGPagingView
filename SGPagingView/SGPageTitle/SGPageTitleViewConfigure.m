@@ -54,6 +54,13 @@
     return _indicatorColor;
 }
 
+- (UIColor *)indicatorBorderColor {
+    if (!_indicatorBorderColor) {
+        _indicatorBorderColor = [UIColor clearColor];
+    }
+    return _indicatorBorderColor;
+}
+
 - (CGFloat)indicatorAdditionalWidth {
     if (_indicatorAdditionalWidth <= 0) {
         _indicatorAdditionalWidth = 0;
@@ -75,6 +82,13 @@
         _indicatorCornerRadius = 0;
     }
     return _indicatorCornerRadius;
+}
+
+- (CGFloat)indicatorBorderWidth {
+    if (_indicatorBorderWidth <= 0) {
+        _indicatorBorderWidth = 0;
+    }
+    return _indicatorBorderWidth;
 }
 
 - (CGFloat)spacingBetweenButtons {
